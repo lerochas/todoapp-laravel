@@ -4,7 +4,7 @@
   <h2 class="mt-4">Incluir Nova Tarefa</h2>
     <form class="form-inline row" method="post">
       <div class="form-group col-8 mb-2 mr-4">
-        <input type="text" class="form-control col-12" id="tarefa" placeholder="Informe a descrição da sua tarefa">
+        <input type="text" class="form-control col-12" id="tarefa" name="tarefa" placeholder="Informe a descrição da sua tarefa">
       </div>
       <button type="submit" class="btn btn-dark col-2 mb-2">Adicionar</button>
     </form>
@@ -18,7 +18,7 @@
       <tbody>
         @foreach($tarefas as $tarefa)
         <tr>
-          <td>{{ $tarefa }}</td>
+          <td>{{ $tarefa->descricao }}</td>
           <td>
             <a href="#" class="btn btn-success">
               <i class="fas fa-check"></i>
